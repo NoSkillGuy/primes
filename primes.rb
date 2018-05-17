@@ -27,6 +27,21 @@ def prime_function
 			File.open('primes.txt', 'a') { |file| file.write("#{n},") } if n_is_a_prime
 		end
 	end
+
+	require 'erb'
+	erb_file = 'README.md.erb'
+	md_file = File.basename(erb_file, '.erb')
+
+	erb_str = File.read(erb_file)
+	primes_data = File.read('primes.txt').split(',')
+	@primes_detected = primes_data.count
+	@largest_prime_detected = primes_data.last
+	renderer = ERB.new(erb_str)
+	result = renderer.result()
+	File.open(md_file, 'w') do |f|
+	  f.write(result)
+	end
+
 	`git add .`
 	`git commit -m 'prime numbers added'`
 	`git push origin master`
