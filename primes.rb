@@ -45,6 +45,7 @@ def prime_function
 	`git add .`
 	`git commit -m 'prime numbers added'`
 	`git push origin master`
+	sleep 20
 	prime_function
 end
 

@@ -1,5 +1,5 @@
 # primes
 There has been lot of instances where we need prime numbers. Finding the prime numbers is an hectic process. This repo's main goal is to identify as many prime numbers as possible using the modern computing power.
 
-# Number of primes detected are 1302398
-# Largest prime detected is 20535947
+# Number of primes detected are 1308456
+# Largest prime detected is 20637853
