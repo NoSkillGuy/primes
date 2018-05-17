@@ -34,6 +34,7 @@ def prime_function
 
 	erb_str = File.read(erb_file)
 	primes_data = File.read('primes.txt').split(',')
+	@primes_search_completed_status = two_numbers[1]
 	@primes_detected = primes_data.count
 	@largest_prime_detected = primes_data.last
 	renderer = ERB.new(erb_str)
