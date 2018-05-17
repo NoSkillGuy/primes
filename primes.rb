@@ -2,7 +2,7 @@ def prime_function
 	primes = []
 	# two_numbers = gets.chomp().split().map(&:to_i)
 	last_prime_detected = File.read('primes.txt').split(',').last.to_i
-	two_numbers = [last_prime_detected+1,last_prime_detected+100000]
+	two_numbers = [last_prime_detected+1,last_prime_detected+200000]
 	if two_numbers[0] < 3
 		primes.push two_numbers[0]
 	end
