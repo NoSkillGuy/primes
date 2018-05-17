@@ -29,7 +29,7 @@ def prime_function
 	end
 	`git add .`
 	`git commit -m 'prime numbers added'`
-	`ggp`
+	`git push origin master`
 	prime_function
 end
 
