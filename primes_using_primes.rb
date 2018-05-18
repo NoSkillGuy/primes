@@ -58,7 +58,7 @@ def prime_function primes_data
 	md_file = File.basename(erb_file, '.erb')
 
 	erb_str = File.read(erb_file)
-	primes_data = File.read('primes.txt').split(',')
+	primes_data = File.read('primes.txt').split(',').map(&:to_i)
 	@primes_search_completed_status = two_numbers[1]
 	@primes_detected = primes_data.count
 	@largest_prime_detected = primes_data.last
