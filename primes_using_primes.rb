@@ -49,7 +49,7 @@ def prime_function primes_data
 				# end
 			end
 			primes.push n if n_is_a_prime
-			File.open('primes.txt', 'a') { |file| file.write("#{n},") } if n_is_a_prime
+			File.open('primes1.txt', 'a') { |file| file.write("#{n},") } if n_is_a_prime
 		end
 	end
 
