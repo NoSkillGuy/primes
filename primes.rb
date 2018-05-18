@@ -43,9 +43,9 @@ def prime_function
 	  f.write(result)
 	end
 
-	`git add .`
+	system("git add .")
 	system("git commit -m 'prime numbers added'")
-	`git push origin master`
+	system("git push origin master")
 	sleep 20
 	prime_function
 end
