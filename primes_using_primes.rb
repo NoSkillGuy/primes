@@ -3,7 +3,7 @@ def prime_function primes_data
 	# two_numbers = gets.chomp().split().map(&:to_i)
 	last_prime_detected = primes_data.last
 	p last_prime_detected
-	two_numbers = [last_prime_detected+1,last_prime_detected+200000]
+	two_numbers = [last_prime_detected+1,last_prime_detected+2000000]
 	p two_numbers
 	# if two_numbers[0] < 3
 	# 	primes.push two_numbers[0]
@@ -19,7 +19,7 @@ def prime_function primes_data
 	end
 
 	(two_numbers[0]...two_numbers[1]).each do |n|
-		if n % 10000 == 0
+		if n % 100000 == 0
 			et = Time.now()
 			ln = n
 			puts "For 10000 numbers #{fn}-#{ln} the script took #{et-st} seconds"
@@ -39,7 +39,7 @@ def prime_function primes_data
 			while primes_data[needed_primes_data.size] < square_root
 				needed_primes_data.push primes_data[needed_primes_data.size]
 			end
-			
+
 			needed_primes_data.each do |p|
 				# if p <= square_root
 					if n%p == 0
@@ -49,7 +49,7 @@ def prime_function primes_data
 				# end
 			end
 			primes.push n if n_is_a_prime
-			File.open('primes1.txt', 'a') { |file| file.write("#{n},") } if n_is_a_prime
+			File.open('primes.txt', 'a') { |file| file.write("#{n},") } if n_is_a_prime
 		end
 	end
 
@@ -58,7 +58,7 @@ def prime_function primes_data
 	md_file = File.basename(erb_file, '.erb')
 
 	erb_str = File.read(erb_file)
-	primes_data = File.read('primes1.txt').split(',')
+	primes_data = File.read('primes.txt').split(',')
 	@primes_search_completed_status = two_numbers[1]
 	@primes_detected = primes_data.count
 	@largest_prime_detected = primes_data.last
