@@ -2,7 +2,7 @@ def prime_function
 	primes = []
 	# two_numbers = gets.chomp().split().map(&:to_i)
 	last_prime_detected = File.read('primes.txt').split(',').last.to_i
-	two_numbers = [last_prime_detected+1,50000000]
+	two_numbers = [last_prime_detected+1,last_prime_detected+100000]
 	if two_numbers[0] < 3
 		primes.push two_numbers[0]
 	end
@@ -25,7 +25,7 @@ def prime_function
 				n_is_a_prime = false if n%d == 0
 			end
 			primes.push n if n_is_a_prime
-			File.open('primes.txt', 'a') { |file| file.write("#{n},") } if n_is_a_prime
+			File.open('primes2.txt', 'a') { |file| file.write("#{n},") } if n_is_a_prime
 		end
 	end
 
