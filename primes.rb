@@ -2,17 +2,17 @@ def prime_function
 	primes = []
 	# two_numbers = gets.chomp().split().map(&:to_i)
 	last_prime_detected = File.read('primes.txt').split(',').last.to_i
-	two_numbers = [last_prime_detected+1,last_prime_detected+1000000]
+	two_numbers = [last_prime_detected+1,50000000]
 	if two_numbers[0] < 3
 		primes.push two_numbers[0]
 	end
 	st = Time.now()
 	fn = two_numbers[0]
 	(two_numbers[0]...two_numbers[1]).each do |n|
-		if n % 100000 == 0
+		if n % 10000 == 0
 			et = Time.now()
 			ln = n
-			puts "For 10000 numbers #{fn}-#{ln} the script took #{et-st} seconds"
+			puts "For 100000 numbers #{fn}-#{ln} the script took #{et-st} seconds"
 			st = Time.now()
 			fn = ln
 			sleep(5)
