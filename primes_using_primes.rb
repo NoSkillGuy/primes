@@ -3,7 +3,7 @@ def prime_function primes_data
 	# two_numbers = gets.chomp().split().map(&:to_i)
 	last_prime_detected = primes_data.last
 	p last_prime_detected
-	two_numbers = [last_prime_detected+1,last_prime_detected+2000000]
+	two_numbers = [last_prime_detected+1,last_prime_detected+20000000]
 	p two_numbers
 	# if two_numbers[0] < 3
 	# 	primes.push two_numbers[0]
@@ -19,10 +19,10 @@ def prime_function primes_data
 	end
 
 	(two_numbers[0]...two_numbers[1]).each do |n|
-		if n % 100000 == 0
+		if n % 1000000 == 0
 			et = Time.now()
 			ln = n
-			puts "For 10000 numbers #{fn}-#{ln} the script took #{et-st} seconds"
+			puts "For 1000000 numbers #{fn}-#{ln} the script took #{et-st} seconds"
 			st = Time.now()
 			fn = ln
 			# sleep(5)
