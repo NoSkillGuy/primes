@@ -75,5 +75,5 @@ def prime_function primes_data
 	prime_function primes_data
 end
 
-primes_data = File.read('corrected_primes.txt').split(',').map(&:to_i)
+primes_data = File.read('primes.txt').split(',').map(&:to_i)
 prime_function primes_data
